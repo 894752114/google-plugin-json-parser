@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JSON 解析器</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">JSON 解析器</h1>
+    <p class="subtitle">粘贴即解析 · 自动反转义与美化</p>
+  </header>
+
+  <main class="main">
+    <section class="panel panel-input">
+      <div class="panel-header">
+        <label class="label" for="input">输入 JSON</label>
+        <div class="toolbar">
+          <button type="button" id="btnCompress" class="btn">压缩</button>
+          <button type="button" id="btnClear" class="btn btn-ghost">清空</button>
+        </div>
+      </div>
+      <textarea
+        id="input"
+        class="textarea"
+        spellcheck="false"
+        placeholder="粘贴或输入 JSON，将自动反转义并美化"
+      ></textarea>
+    </section>
+
+    <section class="panel panel-output">
+      <div class="output-header">
+        <div class="output-title">
+          <label class="label">解析结果</label>
+          <div id="status" class="status" hidden></div>
+        </div>
+        <div class="output-actions">
+          <button type="button" id="btnExpand" class="btn" disabled>一键展开</button>
+          <button type="button" id="btnCollapse" class="btn" disabled>一键收起</button>
+          <button type="button" id="btnCopy" class="btn" disabled>复制</button>
+        </div>
+      </div>
+      <div id="output" class="output" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

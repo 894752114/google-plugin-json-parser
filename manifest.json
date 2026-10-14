@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "JSON 解析器",
+  "version": "1.0.0",
+  "description": "解析并格式化 JSON，自动处理转义字符与多重编码",
+  "action": {
+    "default_title": "JSON 解析器",
+    "default_icon": {
+      "16": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon128.png",
+    "48": "icons/icon128.png",
+    "128": "icons/icon128.png"
+  }
+}
